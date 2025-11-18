@@ -1,0 +1,1 @@
+Progress notes:\n- Implemented basic drag/rotate/snap/wireframe/undo-redo.\n- Next: CSG, advanced snapping, packaging to exe.\n

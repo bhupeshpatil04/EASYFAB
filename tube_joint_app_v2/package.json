@@ -1,0 +1,15 @@
+{
+  "name": "tube-joint-visualizer",
+  "version": "1.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:electron": "echo \"Install electron-packager or electron-builder and run packaging commands\""
+  },
+  "dependencies": {
+    "three": "^0.164.0"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}

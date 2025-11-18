@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Tube Joint Visualizer — v1.1</title>
+  <style>
+    body { margin:0; overflow:hidden; font-family: Arial, sans-serif; }
+    #ui { position:fixed; top:10px; left:10px; background:rgba(255,255,255,0.9); padding:12px; border-radius:8px; width:260px; max-height:90vh; overflow:auto; }
+    label{display:block; margin-bottom:6px;}
+    input[type=number]{width:80px;}
+    button{margin:4px 0; display:block; width:100%;}
+    .row{display:flex; gap:6px; align-items:center;}
+  </style>
+</head>
+<body>
+<div id="ui">
+  <h3>Tube Joint Visualizer</h3>
+  <label>Type:
+    <select id="type"><option value="rect">Rectangular</option><option value="square">Square</option></select>
+  </label>
+  <label>Width: <input id="w" type="number" value="20" /></label>
+  <label>Height: <input id="h" type="number" value="20" /></label>
+  <label>Thickness: <input id="t" type="number" value="2" /></label>
+  <label>Length: <input id="l" type="number" value="100" /></label>
+  <div class="row"><button id="addBtn">Add Tube</button><button id="duplicateBtn">Duplicate Selected</button></div>
+  <div class="row"><button id="wireBtn">Toggle Wireframe</button><button id="snapBtn">Toggle Snap (45°)</button></div>
+  <div class="row"><button id="undoBtn">Undo</button><button id="redoBtn">Redo</button></div>
+  <hr/>
+  <div><strong>Selected Tube Controls</strong></div>
+  <label>Rotate (deg): <input id="rot" type="number" value="0" /></label>
+  <div class="row"><button id="applyRot">Apply Rotation (snap applied)</button><button id="removeBtn">Remove Selected</button></div>
+  <small>Tips: Drag to move a tube. Left-drag rotates camera, right-drag pans, wheel zooms.</small>
+  <hr/>
+  <div><strong>Progress / Changelog</strong>
+  <ul id="changelog">
+    <li>v1.0 basic 3D tubes with add</li>
+    <li>v1.1 added drag, rotate, snap, wireframe, undo/redo</li>
+  </ul></div>
+</div>
+<script src="../node_modules/three/build/three.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>
